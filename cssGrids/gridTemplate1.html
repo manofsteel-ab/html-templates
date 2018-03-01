@@ -1,0 +1,56 @@
+<!--
+   The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier
+   to design web pages without having to use floats and positioning.A grid layout consists of a parent element,
+   with one or more child elements.An HTML element becomes a grid container by setting the display property to
+   grid or inline-grid.
+   Flexbox only works in one-dimension. Grid works in two-dimensions, so it is much better suited for creating complex layouts.
+
+   The grid property sets the following properties:
+
+   1. Explicit Grid Properties
+      grid-template-rows
+      grid-template-columns
+      grid-template-areas
+   2. Implicit Grid Properties
+      grid-auto-rows
+      grid-auto-columns
+      grid-auto-flow
+   3. Gutter Properties
+      grid-column-gap
+      grid-row-gap
+-->
+
+<!doctype html>
+<html>
+<head>
+    <title>Example</title>
+    <style>
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            /*The repeat() function repeats the track definition for the number of times provided by the first parameter.
+             Using auto-fill or auto makes it repeat for as many tracks that will fit the container.*/
+            grid-gap: 2vw;
+        }
+        #grid > div {
+            font-size: 5vw;
+            padding: .5em;
+            background: gold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="grid">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</div>
+</body>
+</html>
